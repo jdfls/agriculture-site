@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#eafaff"/>
+  <!-- soil -->
+  <rect y="200" width="400" height="100" fill="#8b5a2b"/>
+  <rect y="190" width="400" height="16" fill="#5fd068"/>
+  <!-- sensor stake -->
+  <rect x="192" y="120" width="16" height="120" rx="6" fill="#2b2b3a"/>
+  <rect x="176" y="96" width="48" height="36" rx="8" fill="#5ec5ff" stroke="#2b2b3a" stroke-width="4"/>
+  <circle cx="200" cy="114" r="7" fill="#5fd068"/>
+  <!-- signal waves -->
+  <path d="M232 100 q18 14 0 28" stroke="#3fae4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M244 92 q30 22 0 44" stroke="#3fae4a" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- sprout -->
+  <path d="M120 200 q-2 -28 -22 -34" stroke="#3fae4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="96" cy="162" rx="14" ry="9" fill="#5fd068" transform="rotate(-30 96 162)"/>
+  <path d="M120 200 q2 -22 20 -28" stroke="#3fae4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="142" cy="170" rx="12" ry="8" fill="#3fae4a" transform="rotate(30 142 170)"/>
+</svg>

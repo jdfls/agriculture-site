@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Boreal Smart Farm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/boreal-bot.svg" alt="Boreal Bot mascot">
+        Boreal<span>SmartFarm</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="learning.html">Learning</a>
+        <a href="gallery.html" class="active">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Scroll-morph hero (vanilla port of a 21.dev component) =====
+       Tall section + sticky stage. gallery.js builds the cards and
+       morphs them from a circle into an arc as you scroll. -->
+  <section class="morph-section" id="morph">
+    <div class="morph-stage" id="stage">
+
+      <div class="morph-text morph-intro" id="introText">
+        <h2>The future of farming is smart.</h2>
+        <p>SCROLL TO EXPLORE</p>
+      </div>
+
+      <div class="morph-text morph-arc-text" id="arcText">
+        <h2>Our Trip in Pictures</h2>
+        <p>Hover over any card to flip it and see where we were.</p>
+      </div>
+
+      <div class="morph-cards" id="cards"><!-- cards injected by gallery.js --></div>
+
+    </div>
+  </section>
+
+  <!-- ===== Captioned photo grid (click to enlarge) ===== -->
+  <section class="section alt">
+    <div class="container">
+      <h2 class="section-title">Photo Album</h2>
+      <p class="section-subtitle">Click any photo to see it bigger.</p>
+
+      <div class="gallery-grid" id="album">
+        <figure class="gallery-item reveal">
+          <img src="images/greenhouse.svg" alt="Inside the greenhouse">
+          <figcaption>🌿 Inside the warm, bright greenhouse.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/hydroponics.svg" alt="Hydroponic growing channels">
+          <figcaption>💧 Plants growing in water, no soil needed!</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/sensors.svg" alt="A soil sensor in the ground">
+          <figcaption>📡 A sensor checking the soil for the plants.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/vertical-farm.svg" alt="Vertical farming shelves">
+          <figcaption>🥬 Crops stacked high under grow-lights.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/drone.svg" alt="A drone scanning crops">
+          <figcaption>🚁 A drone scanning the fields from above.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="images/ai.svg" alt="The AI control computer">
+          <figcaption>🧠 The AI that runs the whole smart farm.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Video section ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Watch: Smart Farming in Action</h2>
+      <p class="section-subtitle">A short clip about the technology behind smart farms.</p>
+
+      <div class="video-frame reveal">
+        <!-- Replace the src below with your own trip video file (e.g. trip-video.mp4) -->
+        <video controls poster="images/greenhouse.svg">
+          <source src="images/trip-video.mp4" type="video/mp4">
+          Your browser doesn't support the video tag.
+        </video>
+        <p class="video-caption">🎬 Replace this with your own field-trip video (save it as <strong>images/trip-video.mp4</strong>).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Lightbox (hidden until a photo is clicked) ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="close" aria-label="Close">&times;</button>
+    <img src="" alt="Enlarged photo">
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>Created for ICS / Web Development - Field Trip to the Boreal Smart Farm 🌾</p>
+    <p class="footer-sub">Built with HTML &amp; CSS · Gallery animation ported from a component on 21.dev</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boreal Smart Farm - Our Field Trip Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation (same on every page) ===== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/boreal-bot.svg" alt="Boreal Bot mascot">
+        Boreal<span>SmartFarm</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="learning.html">Learning</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero scene ===== -->
+  <section class="hero">
+    <div class="sun"></div>
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+
+    <h1>Our Trip to the Boreal Smart Farm</h1>
+    <p class="tagline">Where robots, sensors, and AI help grow the food of the future. 🌱🤖</p>
+    <button class="btn" onclick="document.getElementById('story').scrollIntoView({ behavior: 'smooth' });">
+      Start the Story ↓
+    </button>
+    <img class="mascot" src="images/boreal-bot.svg" alt="Boreal Bot waving hello">
+
+    <div class="hill left"></div>
+    <div class="hill right"></div>
+  </section>
+
+  <!-- ===== Chapter 1: intro ===== -->
+  <section class="section" id="story">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="chapter-badge">Chapter 1 · The Journey Begins</span>
+        <h2 class="section-title">Hi, I'm Boreal Bot! 👋</h2>
+        <p class="section-subtitle">
+          I'll be your guide. Our class climbed on the bus and rolled out to the
+          Boreal Smart Farm to see how modern technology grows food in smarter,
+          greener ways. Scroll down and I'll show you what we discovered!
+        </p>
+      </div>
+
+      <!-- Story row: what is the farm -->
+      <div class="story-row reveal">
+        <div class="story-text">
+          <h2>What is the Boreal Smart Farm?</h2>
+          <p>
+            The Boreal Smart Farm is a place that mixes farming with technology.
+            Instead of guessing when to water or feed the plants, the farm uses
+            <strong>sensors, computers, and artificial intelligence</strong> to
+            make smart decisions. The result is healthier crops, less wasted water,
+            and food grown right through the cold northern seasons.
+          </p>
+        </div>
+        <div class="story-art">
+          <img src="images/arrival.svg" alt="Our school bus arriving at the Boreal Smart Farm gate">
+        </div>
+      </div>
+
+      <!-- Story row: the field trip -->
+      <div class="story-row reverse reveal">
+        <div class="story-text">
+          <h2>Our Field Trip</h2>
+          <p>
+            We walked through bright greenhouses, watched water flow through
+            hydroponic channels, and met the technology that keeps everything
+            running. Guides explained how each gadget works together so the whole
+            farm acts like one big smart machine.
+          </p>
+        </div>
+        <div class="story-art">
+          <img src="images/greenhouse.svg" alt="A bright greenhouse full of plants at the farm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Purpose section ===== -->
+  <section class="section alt">
+    <div class="container reveal" style="text-align:center;">
+      <h2 class="section-title">Why We Made This Website</h2>
+      <p class="section-subtitle">
+        This site shares our field-trip story and what we learned about smart
+        farming. Here's what you'll find:
+      </p>
+      <ul style="list-style:none; max-width:560px; margin:0 auto; text-align:left; font-weight:600;">
+        <li>🏠 <strong>Home</strong> - the story of our trip</li>
+        <li>📚 <strong>Learning</strong> - the smart-farm technology we discovered</li>
+        <li>📸 <strong>Gallery</strong> - photos, captions, and a video</li>
+      </ul>
+      <p style="margin-top:30px;">
+        <a class="btn btn-sky" href="learning.html">Explore What We Learned →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <p>Created for ICS / Web Development - Field Trip to the Boreal Smart Farm 🌾</p>
+    <p class="footer-sub">Built with HTML &amp; CSS · Gallery animation inspired by a component from 21.dev</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#eafaff"/>
+  <circle cx="320" cy="64" r="30" fill="#ffd23f"/>
+  <!-- hands cupping the earth -->
+  <circle cx="200" cy="150" r="62" fill="#5ec5ff" stroke="#2b2b3a" stroke-width="5"/>
+  <path d="M150 150 q22 -20 40 4 q18 -26 44 -6 q12 28 -16 44 q-40 18 -68 -10 z" fill="#3fae4a"/>
+  <!-- leaf -->
+  <path d="M200 96 q-30 -34 -2 -54 q30 18 2 54z" fill="#5fd068" stroke="#2b2b3a" stroke-width="3"/>
+  <!-- water drop -->
+  <path d="M120 210 q-16 18 0 30 q16 -12 0 -30z" fill="#5ec5ff" stroke="#2b2b3a" stroke-width="3"/>
+  <!-- recycle hint -->
+  <path d="M280 210 a18 18 0 1 1 -10 -32" stroke="#3fae4a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <polygon points="270,172 282,178 268,186" fill="#3fae4a"/>
+</svg>

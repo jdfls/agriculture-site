@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What We Learned - Boreal Smart Farm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/boreal-bot.svg" alt="Boreal Bot mascot">
+        Boreal<span>SmartFarm</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="learning.html" class="active">Learning</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Page header ===== -->
+  <section class="section alt">
+    <div class="container" style="text-align:center;">
+      <span class="chapter-badge">Chapter 2 · What We Discovered</span>
+      <h1 class="section-title">Smart Farming Technology</h1>
+      <p class="section-subtitle">
+        As we walked through the farm, Boreal Bot introduced us to four big ideas
+        that make smart farming work. Hover over each card to explore!
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Feature cards (fade up on scroll, lift on hover) ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="card-grid" id="lessons">
+
+        <a href="#sensors" class="feature-card reveal">
+          <img src="images/sensors.svg" alt="A soil sensor sending a signal">
+          <div class="card-body">
+            <h3>Sensors &amp; IoT <span class="arrow">→</span></h3>
+            <p>Tiny sensors in the soil measure moisture, temperature, and nutrients, then send the data to a computer so the farm always knows what the plants need.</p>
+          </div>
+        </a>
+
+        <a href="#hydroponics" class="feature-card reveal">
+          <img src="images/hydroponics.svg" alt="Plants growing in hydroponic water channels">
+          <div class="card-body">
+            <h3>Hydroponics <span class="arrow">→</span></h3>
+            <p>Plants grow without soil - their roots sit in nutrient-rich water. This uses far less water and lets crops grow indoors all year round.</p>
+          </div>
+        </a>
+
+        <a href="#vertical" class="feature-card reveal">
+          <img src="images/vertical-farm.svg" alt="Plants stacked on lit vertical shelves">
+          <div class="card-body">
+            <h3>Vertical Farming <span class="arrow">→</span></h3>
+            <p>By stacking crops on shelves under LED grow-lights, the farm grows much more food in a small space - perfect for cold northern climates.</p>
+          </div>
+        </a>
+
+        <a href="#ai" class="feature-card reveal">
+          <img src="images/ai.svg" alt="An AI computer chip with a leaf inside">
+          <div class="card-body">
+            <h3>AI &amp; Automation <span class="arrow">→</span></h3>
+            <p>Artificial intelligence reads all the sensor data and spots problems early - like a plant getting sick - then helps decide when to water, feed, or harvest.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sustainability spotlight ===== -->
+  <section class="section alt">
+    <div class="container">
+      <div class="story-row reveal" id="sustainability">
+        <div class="story-text">
+          <span class="chapter-badge">Bonus lesson</span>
+          <h2>Sustainability 🌍</h2>
+          <p>
+            The biggest lesson of all: smart farming is <strong>kinder to the
+            planet</strong>. Recycling water, using clean energy for the lights,
+            and growing food close to home all mean less waste and a smaller
+            carbon footprint - while still feeding more people.
+          </p>
+        </div>
+        <div class="story-art">
+          <img src="images/sustainability.svg" alt="Hands holding the Earth with a growing leaf">
+        </div>
+      </div>
+
+      <!-- Key takeaways list -->
+      <div class="takeaways reveal">
+        <h3>3 Things I'll Remember</h3>
+        <ul>
+          <li>Data beats guessing - sensors tell the farm exactly what plants need.</li>
+          <li>You can grow a lot of food in a small space with hydroponics and vertical farms.</li>
+          <li>Technology and nature can work together to protect the environment.</li>
+        </ul>
+      </div>
+
+      <p style="text-align:center; margin-top:34px;">
+        <a class="btn" href="gallery.html">See Our Photos &amp; Video →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>Created for ICS / Web Development - Field Trip to the Boreal Smart Farm 🌾</p>
+    <p class="footer-sub">Built with HTML &amp; CSS · Gallery animation inspired by a component from 21.dev</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

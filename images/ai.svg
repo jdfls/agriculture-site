@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#eafaff"/>
+  <!-- chip -->
+  <rect x="130" y="90" width="140" height="120" rx="16" fill="#5ec5ff" stroke="#2b2b3a" stroke-width="5"/>
+  <!-- pins -->
+  <g stroke="#2b2b3a" stroke-width="5" stroke-linecap="round">
+    <line x1="130" y1="120" x2="108" y2="120"/><line x1="130" y1="150" x2="108" y2="150"/><line x1="130" y1="180" x2="108" y2="180"/>
+    <line x1="270" y1="120" x2="292" y2="120"/><line x1="270" y1="150" x2="292" y2="150"/><line x1="270" y1="180" x2="292" y2="180"/>
+    <line x1="170" y1="90" x2="170" y2="68"/><line x1="200" y1="90" x2="200" y2="68"/><line x1="230" y1="90" x2="230" y2="68"/>
+    <line x1="170" y1="210" x2="170" y2="232"/><line x1="200" y1="210" x2="200" y2="232"/><line x1="230" y1="210" x2="230" y2="232"/>
+  </g>
+  <!-- leaf-brain inside -->
+  <path d="M200 120 q-34 8 -34 38 q0 26 34 26 q34 0 34 -26 q0 -30 -34 -38z" fill="#3fae4a"/>
+  <path d="M200 130 v40 M200 150 l-16 -10 M200 162 l16 -12" stroke="#fff8e7" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="200" y="270" font-family="Fredoka, sans-serif" font-size="34" font-weight="700" fill="#2b2b3a" text-anchor="middle">AI</text>
+</svg>

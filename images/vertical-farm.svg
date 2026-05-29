@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#2b2b3a"/>
+  <!-- rack frame -->
+  <rect x="90" y="40" width="220" height="230" rx="10" fill="none" stroke="#5ec5ff" stroke-width="5"/>
+  <!-- 3 shelves -->
+  <g>
+    <rect x="100" y="70"  width="200" height="50" rx="6" fill="#3a3a4d"/>
+    <rect x="100" y="140" width="200" height="50" rx="6" fill="#3a3a4d"/>
+    <rect x="100" y="210" width="200" height="50" rx="6" fill="#3a3a4d"/>
+  </g>
+  <!-- grow lights -->
+  <g fill="#ffd23f">
+    <rect x="108" y="64" width="184" height="6" rx="3" opacity="0.9"/>
+    <rect x="108" y="134" width="184" height="6" rx="3" opacity="0.9"/>
+    <rect x="108" y="204" width="184" height="6" rx="3" opacity="0.9"/>
+  </g>
+  <!-- plants on each shelf -->
+  <g fill="#5fd068">
+    <circle cx="130" cy="112" r="11"/><circle cx="170" cy="112" r="11"/><circle cx="210" cy="112" r="11"/><circle cx="250" cy="112" r="11"/><circle cx="285" cy="112" r="11"/>
+    <circle cx="130" cy="182" r="11"/><circle cx="170" cy="182" r="11"/><circle cx="210" cy="182" r="11"/><circle cx="250" cy="182" r="11"/><circle cx="285" cy="182" r="11"/>
+    <circle cx="130" cy="252" r="11"/><circle cx="170" cy="252" r="11"/><circle cx="210" cy="252" r="11"/><circle cx="250" cy="252" r="11"/><circle cx="285" cy="252" r="11"/>
+  </g>
+</svg>

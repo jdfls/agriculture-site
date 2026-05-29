@@ -1,0 +1,632 @@
+/* ============================================================
+   Boreal Smart Farm - Field Trip Story Site
+   Shared stylesheet for index.html, learning.html, gallery.html
+   Style: flat cartoon · bright & cheerful
+   ============================================================ */
+
+/* ---- Google fonts (rounded cartoon look). Falls back if offline ---- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+/* ---- Colour palette + reusable values (CSS variables) ---- */
+:root {
+  --sky:        #5ec5ff;
+  --sky-deep:   #2f9fe0;
+  --grass:      #5fd068;
+  --grass-deep: #3fae4a;
+  --sunshine:   #ffd23f;
+  --soil:       #8b5a2b;
+  --cream:      #fff8e7;
+  --ink:        #2b2b3a;
+  --white:      #ffffff;
+
+  --radius: 18px;
+  --shadow: 0 8px 20px rgba(43, 43, 58, 0.15);
+  --border: 3px solid var(--ink);
+}
+
+/* ---- Basic reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka', 'Trebuchet MS', sans-serif;
+  line-height: 1.15;
+}
+
+a { color: var(--sky-deep); }
+
+img { max-width: 100%; display: block; }
+
+/* Centered content container */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================================
+   NAVIGATION (shared on every page)
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--cream);
+  border-bottom: var(--border);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo img { width: 40px; height: 40px; }
+.logo span { color: var(--grass-deep); }
+
+.main-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.main-nav a:hover { background: var(--sky); color: var(--white); transform: translateY(-2px); }
+.main-nav a.active { background: var(--grass); color: var(--white); }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--sunshine);
+  border: var(--border);
+  border-radius: 999px;
+  padding: 14px 30px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 26px rgba(43,43,58,0.25); }
+.btn:active { transform: translateY(0); }
+.btn.btn-sky { background: var(--sky); color: var(--white); }
+
+/* ============================================================
+   HERO (cartoon scene, built with CSS shapes)
+   ============================================================ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--sky) 0%, #bfe9ff 60%, var(--grass) 60%, var(--grass) 100%);
+  text-align: center;
+  padding: 70px 20px 0;
+  min-height: 540px;
+}
+
+/* the sun */
+.hero .sun {
+  position: absolute;
+  top: 40px;
+  right: 12%;
+  width: 90px;
+  height: 90px;
+  background: var(--sunshine);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px rgba(255, 210, 63, 0.35);
+  animation: float 5s ease-in-out infinite;
+}
+
+/* puffy clouds */
+.hero .cloud {
+  position: absolute;
+  background: var(--white);
+  border-radius: 999px;
+  opacity: 0.9;
+}
+.hero .cloud.c1 { width: 120px; height: 36px; top: 70px;  left: 8%;  animation: drift 18s linear infinite; }
+.hero .cloud.c2 { width: 90px;  height: 28px; top: 130px; left: 40%; animation: drift 26s linear infinite; }
+
+.hero h1 {
+  position: relative;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: var(--ink);
+  text-shadow: 3px 3px 0 var(--white);
+}
+
+.hero .tagline {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 14px auto 26px;
+  max-width: 620px;
+}
+
+.hero .mascot {
+  position: relative;
+  width: 180px;
+  margin: 10px auto 0;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* rolling hills at the bottom of the hero */
+.hero .hill {
+  position: absolute;
+  bottom: -40px;
+  width: 70%;
+  height: 160px;
+  background: var(--grass-deep);
+  border-radius: 50%;
+}
+.hero .hill.left  { left: -10%; }
+.hero .hill.right { right: -10%; background: var(--grass); }
+
+/* ============================================================
+   STORY SECTIONS
+   ============================================================ */
+.section { padding: 64px 0; }
+.section.alt { background: var(--white); border-top: var(--border); border-bottom: var(--border); }
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  opacity: 0.85;
+}
+
+/* chapter badge */
+.chapter-badge {
+  display: inline-block;
+  background: var(--sky);
+  color: var(--white);
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* two-column story row (text + picture) */
+.story-row {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.story-row .story-text { flex: 1 1 320px; }
+.story-row .story-art  { flex: 1 1 320px; }
+.story-row .story-text h2 { font-size: 1.8rem; margin-bottom: 10px; color: var(--grass-deep); }
+.story-row img { border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.story-row.reverse { flex-direction: row-reverse; }
+
+/* ============================================================
+   FEATURE CARDS  (vanilla rebuild of the 21st.dev "EthicalHero")
+   fade-up on scroll + lift/scale on hover
+   ============================================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 16px 30px rgba(43,43,58,0.25); }
+
+.feature-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: var(--border);
+}
+
+.feature-card .card-body { padding: 18px 20px 22px; }
+.feature-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.feature-card .arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--sunshine);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.feature-card:hover .arrow { transform: translateX(4px); }
+
+/* ============================================================
+   KEY TAKEAWAYS LIST
+   ============================================================ */
+.takeaways {
+  max-width: 720px;
+  margin: 44px auto 0;
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px 30px;
+}
+.takeaways h3 { margin-bottom: 14px; font-size: 1.4rem; }
+.takeaways ul { list-style: none; }
+.takeaways li {
+  padding: 8px 0 8px 34px;
+  position: relative;
+  border-bottom: 1px dashed #d9cfae;
+  font-weight: 600;
+}
+.takeaways li:last-child { border-bottom: none; }
+.takeaways li::before {
+  content: "🌱";
+  position: absolute;
+  left: 0;
+}
+
+/* ============================================================
+   GALLERY - scroll morph hero (vanilla port of the 21.dev
+   "scroll-morph-hero" component)
+   Cards scatter in, gather into a circle, then morph into a
+   bottom arc as you scroll. Each card flips over on hover.
+   Cards are built by gallery.js; positions are set per frame.
+   ============================================================ */
+
+/* tall outer section gives us scroll distance to drive the morph */
+.morph-section {
+  position: relative;
+  height: 220vh;
+  background: #fafafa;
+}
+
+/* the visible stage is pinned while the section scrolls past */
+.morph-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* intro line + arc heading, centred and layered behind the cards */
+.morph-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 20px;
+  pointer-events: none;
+}
+.morph-intro { top: 50%; transform: translateY(-50%); z-index: 0; }
+.morph-intro h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); color: #2b2b3a; }
+.morph-intro p  { margin-top: 12px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; color: #8a8a99; }
+.morph-arc-text { top: 12%; z-index: 5; opacity: 0; }
+.morph-arc-text h2 { font-size: clamp(2rem, 5vw, 3.2rem); color: #16161f; }
+.morph-arc-text p  { margin: 10px auto 0; max-width: 520px; color: #555; }
+
+/* the cards layer fills the stage; each card is centred then offset by JS */
+.morph-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.mcard {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 92px;
+  margin: -46px 0 0 -32px;        /* centre on the pivot */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+  cursor: pointer;
+}
+
+.mcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.mcard:hover .mcard-inner { transform: rotateY(180deg); }
+
+.mcard-front,
+.mcard-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+.mcard-front { background: #e5e7eb; }
+.mcard-front img { width: 100%; height: 100%; object-fit: cover; }
+.mcard-front .shade { position: absolute; inset: 0; background: rgba(0,0,0,0.08); }
+
+.mcard-back {
+  background: #111827;
+  border: 1px solid #374151;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.mcard-back .tag { color: #60a5fa; font-size: 8px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 2px; }
+.mcard-back p { color: #fff; font-size: 11px; font-weight: 600; }
+
+/* ============================================================
+   GALLERY - captioned photo grid + lightbox
+   ============================================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+.gallery-item {
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery-item img:hover { transform: scale(1.05); }
+.gallery-item figcaption { padding: 12px 16px; font-weight: 600; }
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 43, 58, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 30px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border: 4px solid var(--white);
+  border-radius: var(--radius);
+}
+.lightbox .close {
+  position: absolute;
+  top: 20px; right: 28px;
+  font-size: 2.4rem;
+  color: var(--white);
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* ============================================================
+   VIDEO SECTION
+   ============================================================ */
+.video-frame {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.video-frame video { width: 100%; display: block; background: #000; }
+.video-frame .video-caption { padding: 14px 18px; font-weight: 600; }
+
+/* ============================================================
+   SCROLL REVEAL (used by script.js)
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+/* stagger children of a grid */
+.card-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
+.card-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
+.card-grid .reveal:nth-child(4) { transition-delay: 0.3s; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+  padding: 28px 20px;
+}
+.site-footer .footer-sub { opacity: 0.7; font-size: 0.9rem; margin-top: 6px; }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+@keyframes drift {
+  from { transform: translateX(-20px); }
+  to   { transform: translateX(60px); }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .story-row, .story-row.reverse { flex-direction: column; }
+  .nav-container { gap: 8px; }
+  .main-nav { gap: 4px; }
+}
+
+/* ============================================================
+   LIQUID GLASS BUTTONS + FLOATING TAB BAR
+   Vanilla port of the 21.dev "Apple Tahoe liquid glass button".
+   The refraction comes from the #liquid-glass SVG filter that
+   script.js injects; it is applied through backdrop-filter on a
+   ::before "lens" behind each button, so the label never ghosts.
+   ============================================================ */
+
+/* the top bar floats and follows the page as you scroll */
+.site-header {
+  position: sticky;
+  top: 14px;
+  background: transparent;
+  border-bottom: none;
+}
+.nav-container {
+  border-radius: 999px;
+  padding: 8px 14px;
+  overflow: hidden;                 /* keep the glass surface clipped to the pill */
+  /* a clean, semi-opaque white glass layer: enough blur to pulp the content
+     behind it (no smearing), no displacement lens over busy page text */
+  background-color: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),          /* soft glass border   */
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.8),         /* top inner highlight */
+    inset 0 -1px 1px rgba(0, 0, 0, 0.04),               /* gentle lower edge   */
+    0 6px 20px rgba(43, 43, 58, 0.12);                  /* subtle float shadow */
+}
+
+/* glass surface for every .btn (the refraction lens stays on buttons, which
+   sit over the smooth hero gradient rather than busy page content) */
+.btn {
+  position: relative;
+  isolation: isolate;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.10);
+  -webkit-backdrop-filter: blur(8px) saturate(160%);
+  backdrop-filter: blur(8px) url(#liquid-glass) saturate(160%);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, white 10%, transparent),
+    inset 1.8px 3px 0 -2px color-mix(in srgb, white 90%, transparent),
+    inset -2px -2px 0 -2px color-mix(in srgb, white 80%, transparent),
+    inset -3px -8px 1px -6px color-mix(in srgb, white 60%, transparent),
+    inset -0.3px -1px 4px 0 color-mix(in srgb, black 12%, transparent),
+    inset -1.5px 2.5px 0 -2px color-mix(in srgb, black 20%, transparent),
+    inset 0 3px 4px -2px color-mix(in srgb, black 20%, transparent),
+    inset 2px -6.5px 1px -4px color-mix(in srgb, black 10%, transparent),
+    0 1px 5px 0 color-mix(in srgb, black 10%, transparent),
+    0 6px 16px 0 color-mix(in srgb, black 8%, transparent);
+  transition: background-color 400ms cubic-bezier(1, 0, 0.4, 1), box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
+}
+.btn:hover { transform: scale(1.03); background: transparent; color: var(--ink); }
+.btn:active { transform: scale(0.96); }
+.btn::before         { background-color: color-mix(in srgb, var(--sunshine) 45%, transparent); }
+.btn.btn-sky::before { background-color: color-mix(in srgb, var(--sky) 50%, transparent); }
+
+/* Nav links sit directly on the glass pill, so they get NO lens of their own
+   (a second backdrop-filter over the first is what made the bar look dirty).
+   They are just readable text with soft tinted pills on hover / active. */
+.main-nav a {
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+.main-nav a:active { transform: scale(0.97); }
+
+/* active "Learning" tab: soft green glass that sits cleanly on the pill */
+.main-nav a.active {
+  background: color-mix(in srgb, var(--grass) 38%, transparent);
+  color: var(--ink);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.7);
+}
