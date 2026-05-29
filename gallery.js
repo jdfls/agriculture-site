@@ -112,7 +112,7 @@
       } else {
         // ----- circle position -----
         const minDim = Math.min(w, h);
-        const circleR = Math.min(minDim * 0.32, 300);
+        const circleR = Math.min(minDim * 0.44, 400);
         const cAngle = (i / TOTAL) * 360;
         const cRad = (cAngle * Math.PI) / 180;
         const circle = {
