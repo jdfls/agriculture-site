@@ -24,13 +24,13 @@
 
   // The trip photos, repeated so the ring looks full (like the 21.dev 20).
   const PHOTOS = [
-    { src: 'images/arrival.svg',       label: 'Arrival' },
-    { src: 'images/greenhouse.svg',    label: 'Greenhouse' },
-    { src: 'images/sensors.svg',       label: 'Sensors' },
-    { src: 'images/hydroponics.svg',   label: 'Hydroponics' },
-    { src: 'images/vertical-farm.svg', label: 'Vertical Farm' },
-    { src: 'images/drone.svg',         label: 'Drone' },
-    { src: 'images/ai.svg',            label: 'AI Brain' },
+    { src: 'images/arrival.jpg',       label: 'Arrival' },
+    { src: 'images/greenhouse.jpg',    label: 'Greenhouse' },
+    { src: 'images/sensors.jpg',       label: 'Sensors' },
+    { src: 'images/hydroponics.jpg',   label: 'Hydroponics' },
+    { src: 'images/vertical-farm.jpg', label: 'Vertical Farm' },
+    { src: 'images/drone.jpg',         label: 'Drone' },
+    { src: 'images/ai.jpg',            label: 'AI Brain' },
   ];
   const TOTAL = 18;
   const lerp = (a, b, t) => a * (1 - t) + b * t;
