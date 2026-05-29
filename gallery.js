@@ -51,6 +51,16 @@
     cardLayer.appendChild(card);
     cards.push(card);
 
+    // spotlight on click — reuses the same lightbox as the photo album
+    card.addEventListener('click', () => {
+      const lb = document.getElementById('lightbox');
+      if (!lb) return;
+      const lbImg = lb.querySelector('img');
+      lbImg.src = photo.src;
+      lbImg.alt = photo.label;
+      lb.classList.add('open');
+    });
+
     // a stable random scatter start for each card
     scatter.push({
       x: (Math.random() - 0.5) * 1400,
